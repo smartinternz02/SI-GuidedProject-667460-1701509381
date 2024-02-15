@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}">
+</head>
+<body>
+    <h1>Prediction Page</h1>
+    <form action="{{ url_for('result') }}" method="post">
+        <label for="Company_Name">Company Name:</label>
+        <input type="text" name="Company_Name" required><br>
+
+        <label for="Job_Title">Job Title:</label>
+        <input type="text" name="Job_Title" required><br>
+
+        <label for="Location">Location:</label>
+        <input type="text" name="Location" required><br>
+
+        <label for="Job_Roles">Job Roles:</label>
+        <input type="text" name="Job_Roles" required><br>
+
+        <label for="salaries_report">salaries report:</label>
+        <input type="text" name="salaries_report" required><br>
+
+        <label for="Employment_Status">Employment Status:</label>
+        <input type="text" name="Employment_Status" required><br>
+
+        <label for="Rating">Rating:</label>
+        <input type="text" name="Rating" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
